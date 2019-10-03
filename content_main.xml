@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userprofile"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add item from the saved list"
+       android:layout_margin="10dp"
+        android:id="@+id/btnitem"
+
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/cat"
+        android:entries="@array/cat"
+        >
+
+    </Spinner>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat1"
+        android:layout_margin="10dp"
+        android:entries="@array/comp"></Spinner>
+
+
+
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Description"
+        android:layout_margin="10dp"
+        android:id="@+id/pd"
+        android:inputType="textLongMessage"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edquantity"
+        android:layout_below="@+id/pd"
+        android:layout_margin="10dp"
+        android:hint="Quantity"/>
+     <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="capture"
+         android:id="@+id/capture"
+         android:layout_margin="10dp"/>
+     <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="upload"
+         android:id="@+id/upload"
+         android:layout_margin="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imageView" />
+
+    </LinearLayout>
+    </ScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chksave"
+        android:layout_below="@+id/edquantity"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="Save this item for reuse"
+        />
+        </LinearLayout>
+
+
+
+</RelativeLayout>
